@@ -1,0 +1,75 @@
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" crossorigin="anonymous"></script>
+<script>
+	try {
+		if (typeof urlParams["ad"] != "undefined") {
+			cookie("ad", urlParams["ad"]);
+		}
+	} catch (e) {}
+	var uid = null;
+	var status = null;
+	var ary1 ;
+	var url = location.href;
+	if (url.indexOf('?') != -1) {
+		ary1 = url.split('?');
+		ary1[1]='?'+ary1[1];
+	}else{
+		ary1=['',''];
+	}
+	try {
+		var switchPage = function(language) {
+			switch (language) {
+				case 'zh':
+				case 'zh-cn':
+					console.log('zh-hans');
+					window.location.href = 'https://www.x-legend.com/online/edeneternal/zh-hans/' + ary1[1];
+					return true;
+					break;
+
+				case 'zh-tw':
+					console.log('zh-hant');
+					window.location.href = 'https://www.x-legend.com/online/edeneternal/zh-hant/' +ary1[1];
+					return true;
+					break;
+
+				case 'en':
+				case 'en-us':
+					console.log('en');
+					window.location.href = 'https://www.x-legend.com/online/edeneternal/en/' + ary1[1];
+					return true;
+					break;
+				case 'ja':
+					console.log('ja');
+					window.location.href = 'https://www.x-legend.com/online/edeneternal/ja/' + ary1[1];
+					return true;
+					break;
+
+				default:
+			}
+			return false;
+		};
+
+		// detect window.navigator.languages
+		var found = false;
+		if (typeof(window.navigator.languages) === 'object') {
+			for (var index in window.navigator.languages) {
+				console.log(window.navigator.languages[index].toLowerCase());
+				found = switchPage(window.navigator.languages[index].toLowerCase());
+				if (found) break;
+			}
+		}
+
+		if (!found) {
+			var lang = window.navigator.userLanguage || window.navigator.language;
+			var relang = lang.toLowerCase();
+			found = switchPage(relang);
+		}
+
+		if (!found) {
+			console.log('/en-US' + window.location.pathname);
+			//window.location.href = '/en-US' + window.location.pathname;
+		}
+	} catch (e) {
+		console.log('/en-US' + window.location.pathname);
+		console.log(e);
+	}
+</script>

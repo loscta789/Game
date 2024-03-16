@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Segoe UI', 'Lucida Sans Unicode', 'Lucida Grande', Tahoma, Arial, sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.headerBackground {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 100%, black);
+
+
+}
+
+
+.inputForm {
+  
+    background: linear-gradient(180deg, #FFFFFF 0%, #FBFBFB 4%, #FFFFFF 15%);
+  
+  
+}
+
+.buttonRegister {
+  font-size: 14px;
+    font-family: 'Cinzel Decorative', cursive;
+}
