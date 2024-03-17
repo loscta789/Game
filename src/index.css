@@ -35,3 +35,65 @@ body {
   font-size: 14px;
     font-family: 'Cinzel Decorative', cursive;
 }
+
+
+.kaushan-script-regular {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.philosopher-regular {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.philosopher-bold {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.philosopher-regular-italic {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.philosopher-bold-italic {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.philosoper {
+  font-family: "Philosopher", sans-serif;
+}
+
+.pagination {
+  list-style-type: circle;
+  background-color: red;
+}
+
+
+.zoom-effect {
+  transition: transform 0.3s ease; /* Définit une transition douce pour l'effet de zoom */
+  transform: scale(1); /* L'état initial, sans zoom */
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1); /* Agrandit l'élément de 20% au survol */
+
+}
+
+.rotate-down {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate-up {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}

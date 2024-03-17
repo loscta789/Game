@@ -1,8 +1,8 @@
 import myImage from '.././assets/image.jpg'
 export function ImageHeader() {
     return (
-        <div className="">
-            <img src={myImage} alt="" className="bg-center w-full h-[80vh] "/>
+        <div className="h-[80vh]">
+            <img src={myImage} alt="" className="w-full h-full object-cover object-center"/>
         </div>
     )
 }
